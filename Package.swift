@@ -3,31 +3,19 @@
 
 import PackageDescription
 
-let resources: [Resource] = [.process("Resources")]
+let days = [
+  "Day1",
+  "Day2",
+  "Day3",
+  "Day4",
+  "Day5",
+]
 
-let day1 = "Day1"
-let day2 = "Day2"
-let day3 = "Day3"
-let day4 = "Day4"
-let day5 = "Day5"
+let resources: [Resource] = [.process("Resources")]
 
 let package = Package(
     name: "Advent of code",
-    products: [
-      .executable(name: day1, targets: [day1]),
-      .executable(name: day2, targets: [day2]),
-      .executable(name: day3, targets: [day3]),
-      .executable(name: day4, targets: [day4]),
-      .executable(name: day5, targets: [day5]),
-    ],
-    dependencies: [
-
-    ],
-    targets: [
-      .executableTarget(name: day1, resources: resources),
-      .executableTarget(name: day2, resources: resources),
-      .executableTarget(name: day3, resources: resources),
-      .executableTarget(name: day4, resources: resources),
-      .executableTarget(name: day5, resources: resources),
-    ]
+    products: days.map({ Product.executable(name: $0, targets: [$0]) }),
+    dependencies: [ ],
+    targets: days.map({ Target.executableTarget(name: $0, resources: resources) })
 )
