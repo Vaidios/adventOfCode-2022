@@ -153,21 +153,3 @@ print("Answer to part 1 is \(answer.reduce("", +))")
 
 print(answer)
 print("Answer to part 2 is \(part2answer.reduce("", +))")
-//instructions.forEach { instruction in
-//  var fromColumn = boxStructure[instruction.from - 1]
-//  var toColumn = boxStructure[instruction.to - 1]
-//  let moveRange = (0 ..< instruction.move)
-//
-//  for moveIndex in moveRange {
-//    let index = fromColumn.count - 1 - moveIndex
-//    let itemToMove = fromColumn.popLast()!
-//    toColumn.append(itemToMove)
-//  }
-//
-//  print(boxStructure[instruction.from - 1])
-//  print(boxStructure[instruction.to - 1])
-//  boxStructure[instruction.from - 1] = fromColumn
-//  boxStructure[instruction.to - 1] = toColumn
-//  print(boxStructure[instruction.from - 1])
-//  print(boxStructure[instruction.to - 1])
-//}
