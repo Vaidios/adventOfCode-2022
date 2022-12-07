@@ -11,6 +11,7 @@ let days = [
   "Day5",
   "Day6",
   "Day7",
+  "Day8",
 ]
 
 let resources: [Resource] = [.process("Resources")]
